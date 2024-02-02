@@ -1,0 +1,64 @@
+netsh interface delete interface "VirtualBox Host-Only Ethernet Adapter"
+centos
+192.168.186.128
+ubantu
+192.168.186.129
+# echo ONBOOT =yes >> /etc/sysconfig/network-scripts/ifcfg-ens33 
+D:/desk/freecplus_20200926.tg
+将端口设置为默认的 SSH 端口 22：
+Port 22 
+PasswordAuthentication yes
+删除 # 符号并取消注释 PasswordAuthentication yes 行。如果没有该行，可以手动添加它。
+
+c++服务端开发
+
+用户组和成员
+
+192.168.181.1
+
+也就是说上面的命令只是做了动态链接而非静态？
+
+2024/1/30 02:52:54
+
+对的，上面的命令是做动态链接，而不是静态链接。
+
+动态链接和静态链接是两种不同的链接方式。在动态链接中，
+程序在运行时会加载共享库文件（也称为动态链接库或共享对象），
+并将其链接到程序中。这样，多个程序可以共享相同的库文件，
+从而减少内存占用和磁盘空间占用。同时，如果库文件发生更新，
+只需要替换库文件即可，无需重新编译程序。
+
+在静态链接中，库文件会被编译进最终的可执行文件中，因此程序在运行时不需要加载和链接库文件。
+这样，程序可以在没有相应库文件的情况下独立运行，但是会导致程序的可执行文件变得更大，
+并且无法共享库文件。
+
+在上面的命令中，使用了 -lcustomlib 选项来指定需要链接的库文件。
+如果库文件名是 libcustomlib.so，则会进行动态链接；
+如果库文件名是 libcustomlib.a，则会进行静态链接。由于没有指定 -static 选项，
+因此默认采用了动态链接方式。
+
+如果需要进行静态链接，则可以添加 -static 选项。例如：
+
+bash
+gcc -I/new/path/includes -L/new/path/libs -static -lcustomlib your_program.c -o your_program
+这样就会进行静态链接，将库文件编译进最终的可执行文件中。需要注意的是，静态链接会使得可执行文件变得更大，因此只有在必要时才应该使用静态链接。
+
+
+vs\VC\Tools\MSVC\14.38.33130
+vs\VC\Auxiliary\VS
+
+
+//std::for_each遍历循环，lambda表达式写匿名函数
+std::for_each(p_begin,p_end,[](auto input){
+	std:::out<<input<<std::endl;
+});
+
+//创建整型容器myvector
+std::vector<int> myVector = {5, 2, 7, 1, 9};
+
+// 对 vector 进行排序
+std::sort(myVector.begin(), myVector.end());
+
+for(auto item : myvector){
+	std:::out<<item<<std::endl;
+}
